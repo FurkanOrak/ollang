@@ -1,0 +1,234 @@
+<div id="profile" class="flex flex-col xl:flex-row p-5">
+    <div class="basis-2/3">
+        <div class="flex flex-col lg:flex-row mb-20">
+            <div class="basis-1/5 flex justify-center mb-5 lg:mb-0">
+                <img [src]="profileDatas.avatar" class="rounded-full w-32 h-32">
+            </div>
+            <div class="basis-4/5">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="basis-1/2 text-center mb-5 lg:text-start lg:mb-0">
+                        <h2 class="text-2xl text-slate-800">{{profileDatas.name}}</h2>
+                        <h3 class="text-base text-gray-600">
+                            <fa-icon class="mr-1" [icon]="iconService.icons.locationDot"></fa-icon> {{profileDatas.state}}, {{profileDatas.country}}
+                        </h3>
+                    </div>
+                    <div class="basis-1/2 flex items-center justify-center mb-5 lg:justify-end lg:mb-0">
+                        <button type="button"
+                            class="inline-block mx-1 px-6 py-2.5 bg-blue-500 text-white font-medium text-xs rounded-full">Edit
+                            Profile</button>
+                        <button type="button"
+                            class="inline-block mx-1 px-6 py-2 border-2 border-gray-300 text-gray-500 font-medium text-xs rounded-full">Public
+                            View</button>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <div class="basis-1/1 py-2 w-full text-sm text-gray-500 font-normal text-center lg:w-3/4 lg:text-start">
+                        {{profileDatas.summary}}
+                        <span class="font-semibold text-xs text-blue-500 cursor-pointer">MORE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row mb-20">
+            <div class="basis-1/4">
+                <div class="flex flex-row mb-5 lg:mb-0">
+                    <div class="basis-1/12 lg:basis-1/5 mr-5 lg:mr-0 flex items-center text-2xl text-gray-400">
+                        <fa-icon [icon]="iconService.icons.clock"></fa-icon>
+                    </div>
+                    <div class="basis-11/12 lg:basis-4/5">
+                        <div class="inline-block">
+                            <div class="text-gray-700 font-semibold">{{profileDatas.yearsOfExperience}} Years Job</div>
+                            <div class="text-gray-500">Experienced</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basis-1/4">
+                <div class="flex flex-row mb-5 lg:mb-0">
+                    <div class="basis-1/12 lg:basis-1/5 mr-5 lg:mr-0 flex items-center text-2xl text-gray-400">
+                        <fa-icon [icon]="iconService.icons.trophy"></fa-icon>
+                    </div>
+                    <div class="basis-11/12 lg:basis-4/5">
+                        <div class="inline-block">
+                            <div class="text-gray-700 font-semibold">{{profileDatas.certificateCount}} Certificates</div>
+                            <div class="text-gray-500">Achieved</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basis-1/4">
+                <div class="flex flex-row mb-5 lg:mb-0">
+                    <div class="basis-1/12 lg:basis-1/5 mr-5 lg:mr-0 flex items-center text-2xl text-gray-400">
+                        <fa-icon [icon]="iconService.icons.fileLines"></fa-icon>
+                    </div>
+                    <div class="basis-11/12 lg:basis-4/5">
+                        <div class="inline-block">
+                            <div class="text-gray-700 font-semibold">{{profileDatas.numberOfInternships}} Internship</div>
+                            <div class="text-gray-500">Completed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="basis-1/4">
+            </div>
+        </div>
+
+        <div class="mb-10">
+            <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200">
+                <li class="mr-2 border-b-2 border-blue-200">
+                    <a class="inline-block p-4 text-gray-600 rounded-t-lg cursor-pointer font-semibold">Experience</a>
+                </li>
+                <li class="mr-2">
+                    <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed">Biography</a>
+                </li>
+                <li class="mr-2">
+                    <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed">Skills</a>
+                </li>
+                <li class="mr-2">
+                    <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="p-6 max-w-full bg-white rounded-lg border border-gray-200 shadow-sm mb-5 lg:mb-0">
+            <div class="flex flex-col lg:flex-row mb-10">
+                <div class="basis-2/3 mb-5 lg:mb-0">
+                    <h3 class="mx-2 text-2xl inline font-semibold tracking-tight text-gray-900">Job
+                        Experience
+                    </h3>
+                    <h5 class="mx-2 inline text-gray-500">3 Job history</h5>
+                </div>
+                <div class="basis-1/3 flex justify-start lg:justify-end">
+                    <button type="button" class="inline-block mx-1 px-6 py-2 border-2 border-gray-300 text-gray-500 font-medium 
+                        text-xs rounded-full">
+                        <fa-icon class="mr-1" [icon]="iconService.icons.plus"></fa-icon>Add More
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-row">
+                <div class="basis-1/12 flex items-start justify-center">
+                    <img src="https://www.svgrepo.com/show/303295/dribbble-icon-1-logo.svg" class="w-14 h-14"
+                        alt="Dribble">
+                </div>
+                <div class="basis-11/12 pb-10 px-5 border-b">
+                    <div class="flex flex-col lg:flex-row mb-5">
+                        <div class="basis-1/3">
+                            <div class="font-bold text-gray-900">Graphic Designer</div>
+                            <div class="text-gray-600">Dribbble Inc.</div>
+                        </div>
+                        <div class="basis-1/3 text-gray-500 flex items-center">
+                            <fa-icon class="mr-2" [icon]="iconService.icons.clock"></fa-icon>Feb 2016 - Dec 2017
+                        </div>
+                        <div class="basis-1/3 text-gray-500 flex items-center">
+                            <fa-icon class="mr-2" [icon]="iconService.icons.locationDot"></fa-icon>New York, USA
+                        </div>
+                    </div>
+                    <div class="flex flex-row mb-5">
+                        <div class="basis-1/1 text-gray-600">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto voluptate dignissimos
+                            incidunt
+                            doloremque officiis ea quasi nisi dolorem iste excepturi. Quo, deserunt optio! Perferendis
+                            sequi
+                            illo temporibus officia nam qui!
+                        </div>
+                    </div>
+                    <div class="flex flex-row">
+                        <div class="basis-1/1 w-full">
+                            <div class="text-gray-900 mb-3">Media Files (2)</div>
+                            <div class="flex flex-col lg:flex-row">
+                                <div class="basis-1/2 mr-0 mb-5 lg:mr-3">
+                                    <img class="block object-cover object-center w-full h-48"
+                                        src="http://placeimg.com/200/200/people">
+                                </div>
+                                <div class="basis-1/2 ml-0 mb-5 lg:ml-3">
+                                    <img class="block object-cover object-center w-full h-48"
+                                        src="http://placeimg.com/200/200/tech">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row mt-10">
+                <div class="basis-1/12 flex items-start justify-center">
+                    <img src="https://seeklogo.com/images/S/sketch-logo-E6FC85934D-seeklogo.com.png" class="w-14 h-14"
+                        alt="Sketch">
+                </div>
+                <div class="basis-11/12 px-5">
+                    <div class="flex flex-col lg:flex-row mb-5">
+                        <div class="basis-1/3">
+                            <div class="font-bold text-gray-900">Lead Designer</div>
+                            <div class="text-gray-600">Sketch App</div>
+                        </div>
+                        <div class="basis-1/3 text-gray-500 flex items-center">
+                            <fa-icon class="mr-2" [icon]="iconService.icons.clock"></fa-icon>Apr 2010 - Sept 2011
+                        </div>
+                        <div class="basis-1/3 text-gray-500 flex items-center">
+                            <fa-icon class="mr-2" [icon]="iconService.icons.locationDot"></fa-icon>Katmandu, Nepal
+                        </div>
+                    </div>
+                    <div class="flex flex-row mb-5">
+                        <div class="basis-1/1 text-gray-600">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto voluptate dignissimos
+                            incidunt
+                            doloremque officiis ea quasi nisi dolorem iste excepturi. Quo, deserunt optio! Perferendis
+                            sequi
+                            illo temporibus officia nam qui!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="basis-1/3">
+        <div class="flex flex-row justify-center">
+            <div class="basis-1/1 p-6 rounded-lg shadow-sm bg-white max-w-sm border border-gray-200">
+                <div class="flex justify-center py-10">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3594/3594824.png">
+                </div>
+                <div class="text-gray-900 text-xl text-center font-medium mb-3">
+                    Upgrade To <span class="font-bold">Pro</span>
+                </div>
+                <div class="text-gray-700 mb-10 text-center text-sm">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto sint aspernatur soluta, blanditiis
+                    corporis rem laborum distinctio at nobis provident.
+                </div>
+                <div class="text-sm mb-10 flex justify-center">
+                    <ul>
+                        <li class="mb-2 text-gray-700">
+                            <fa-icon class="mr-2 text-lg text-green-500" [icon]="iconService.icons.circleCheck"></fa-icon>Unlimited
+                            Job Post.
+                        </li>
+                        <li class="mb-2 text-gray-700">
+                            <fa-icon class="mr-2 text-lg text-green-500" [icon]="iconService.icons.circleCheck"></fa-icon>Multiple
+                            job
+                            communication.
+                        </li>
+                        <li class="mb-2 text-gray-700">
+                            <fa-icon class="mr-2 text-lg text-green-500" [icon]="iconService.icons.circleCheck"></fa-icon>Unlimited
+                            calling access
+                            from different city.
+                        </li>
+                        <li class="mb-2 text-gray-700">
+                            <fa-icon class="mr-2 text-lg text-green-500" [icon]="iconService.icons.circleCheck"></fa-icon>Hire 10+
+                            freelancers for
+                            one project.
+                        </li>
+                        <li class="mb-2 text-gray-700">
+                            <fa-icon class="mr-2 text-lg text-green-500" [icon]="iconService.icons.circleCheck"></fa-icon>Filter,
+                            block, search
+                            talent freelancers.
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-center">
+                    <button type="button"
+                        class="mx-1 px-6 py-2.5 bg-blue-500 text-white font-medium text-xs rounded-full">Upgrade
+                        Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
