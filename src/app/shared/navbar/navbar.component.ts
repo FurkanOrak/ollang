@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faMagnifyingGlass, faEllipsis, faBell, faBars } from '@fortawesome/free-solid-svg-icons';
 import { AppService } from 'src/app/services/app.service';
 import { IconsService } from 'src/app/services/icons.service';
 
